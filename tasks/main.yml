@@ -1,0 +1,19 @@
+---
+# tasks file for ansible-role-vscode
+
+- name: Add repository for Debian variants
+  include: add_debian_repo.yml
+  when: ansible_os_family == "Debian" or ansible_os_family == "Kali GNU/Linux"
+
+- name: Add repository for RedHat variants
+  include: add_redhat_repo.yml
+  when: ansible_os_family == "RedHat"
+
+- name: Install VS Code
+  package:
+    name: code
+    state: present
+
+- name: Install extensions
+  include: install_extensions.yml
+  when: vscode_user is defined and ( vscode_extensions | length > 0 )

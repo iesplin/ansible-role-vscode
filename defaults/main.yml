@@ -1,0 +1,10 @@
+---
+# Defaults for ansible-role-vscode
+
+# User account for extensions
+vscode_user: root
+
+# Extensions to install
+# vscode_extensions:
+#   - ms-python.python
+vscode_extensions: []
