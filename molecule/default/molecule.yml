@@ -6,12 +6,10 @@ driver:
 lint:
   name: yamllint
 platforms:
-  # - name: kali-vscode
-  #   image: kalilinux/kali-linux-docker
-  # - name: centos-vscode
-  #   image: centos:7
-  # - name: ubuntu-vscode
-  #   image: ubuntu:18.04
+  - name: kali-vscode
+    image: kalilinux/kali-linux-docker
+  - name: ubuntu-vscode
+    image: ubuntu:18.04
   - name: fedora-vscode
     image: fedora:latest
 provisioner:
