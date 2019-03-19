@@ -12,7 +12,7 @@
 - name: Install VS Code
   package:
     name: code
-    state: present
+    state: latest
 
 - name: Install extensions
   include: install_extensions.yml
