@@ -12,8 +12,4 @@
 - name: Install VS Code
   package:
     name: code
-    state: latest
-
-- name: Install extensions
-  include: install_extensions.yml
-  when: "vscode_user is defined and ( vscode_extensions | length > 0 )"
+    state: present
