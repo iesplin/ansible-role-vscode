@@ -1,20 +1,22 @@
 ---
 galaxy_info:
-  author: Ian Esplin
-  description: Visual Studio Code for Linux
+  role_name: vscode
+  author: iesplin
+  description: Install Visual Studio Code for Linux
   license: MIT
-  min_ansible_version: 2.5
+  min_ansible_version: 2.10
   platforms:
-    - name: Fedora
+    - name: Debian
       versions:
-        - 29
+        - bullseye
     - name: Ubuntu
       versions:
-        - 18.04
-    - name: Kali
+        - jammy
+    - name: Fedora
       versions:
-        - 18.04
+        - 36
 
-  galaxy_tags: []
+  galaxy_tags:
+    - development
 
 dependencies: []

@@ -1,15 +1,13 @@
 ---
 # tasks file for ansible-role-vscode
 
-- name: Add repository for Debian variants
-  include: add_debian_repo.yml
-  when: "ansible_os_family == 'Debian' or 'kali' in ansible_distribution_release"
+- ansible.builtin.include_tasks: setup-debian-repo.yml
+  when: ansible_os_family == 'Debian'
 
-- name: Add repository for RedHat variants
-  include: add_redhat_repo.yml
-  when: "ansible_os_family == 'RedHat'"
+- ansible.builtin.include_tasks: setup-redhat-repo.yml
+  when: ansible_os_family == 'RedHat'
 
-- name: Install VS Code
+- name: Install Visual Studio Code
   package:
     name: code
     state: present

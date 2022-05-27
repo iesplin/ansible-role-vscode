@@ -1,16 +1,17 @@
-ansible-role-vscode
-=========
+# Ansible role: Visual Studio Code
 
-Ansible role for installing VS Code
+[![CI](https://github.com/iesplin/ansible-role-vscode/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/iesplin/ansible-role-vscode/actions/workflows/ci.yml)
 
-Example Playbook
-----------------
+Ansible role to install Visual Studio Code for Linux.
 
-    - hosts: servers
-      roles:
-         - role: ansible-role-vscode
+## Example playbook
 
-License
--------
+```yaml
+- hosts: localhost
+  roles:
+    - iesplin.vscode
+```
+
+## License
 
 MIT

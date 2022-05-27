@@ -1,9 +1,9 @@
 ---
-# Tasks to add the VS Code repository for Debian variants
-
 - name: Install Debian dependencies
   apt:
-    name: "{{ vscode_debian_dependencies }}"
+    name:
+      - apt-transport-https
+      - gpg
     state: present
     update_cache: true
 
@@ -12,7 +12,7 @@
     url: https://packages.microsoft.com/keys/microsoft.asc
     state: present
 
-- name: Add VS Code apt repository
+- name: Add Microsoft repository
   apt_repository:
     repo: deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
     state: present
