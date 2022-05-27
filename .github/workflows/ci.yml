@@ -39,10 +39,10 @@ jobs:
     strategy:
       matrix:
         include:
-          - distro: docker.io/library/debian:testing
-          - distro: docker.io/library/debian:stable
-          - distro: docker.io/library/ubuntu:latest
-          - distro: docker.io/library/fedora:latest
+          - distro: debian:testing
+          - distro: debian:stable
+          - distro: ubuntu:latest
+          - distro: fedora:latest
     steps:
       - name: Check out the codebase
         uses: actions/checkout@v2
